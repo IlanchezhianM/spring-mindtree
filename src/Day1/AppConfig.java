@@ -7,21 +7,35 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class AppConfig {
 	
+	int count = 0;
+	
 	@Bean(name="oldshoe")
 	//@Scope("prototype")
 	Shoe getBata(){
 		System.out.println("Creating Bata object");
-		return new Bata();
+		return new Bata(0);
 	}
 	
 	@Bean(name="newshoe")
-	//@Scope("prototype")
+	@Scope("prototype")
 	Shoe getNewBata(){
 		System.out.println("Creating New Bata object");
-		return new Bata();
+		return new Bata(this.count++);
+	}
+	
+	@Bean(name="newshoearr")
+	@Scope("prototype")
+	Shoe[] getNewShoeBata(){
+		System.out.println("Creating New Bata object");
+		Shoe s[] = new Bata[10];
+		for(int i = 0; i < s.length; i++){
+			s[i] = new Bata(this.count++);
+		}
+		return s;
 	}
 	
 	@Bean(name="ssr")
+	@Scope("prototype")
 	ShoeShowRoom getShowRoom()
 	{
 		return new ShoeShowRoom();

@@ -4,6 +4,11 @@ public class Bata implements Shoe{
 
 	int price;
 	
+	public Bata(int price) {
+		super();
+		this.price = price;
+	}
+
 	@Override
 	public void makeShoeComfortable() {
 		System.out.println("Making feet comfortable since 1927");

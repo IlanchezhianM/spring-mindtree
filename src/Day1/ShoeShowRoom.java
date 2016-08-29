@@ -13,7 +13,16 @@ public class ShoeShowRoom {
 
 	//Autowiring by Name
 	@Autowired
-	@Qualifier("newshoe")
-	Shoe s2;
+	@Qualifier("newshoearr")
+	Shoe s2[] = new Bata[10];
+
+//	public ShoeShowRoom(int count) {
+//		for(int i = 0; i < s2.length; i++){
+//			this.s2[i] = new Bata(i);
+//		}
+//	}
+	
+	
+	
 	
 }

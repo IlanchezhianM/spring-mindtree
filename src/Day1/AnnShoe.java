@@ -16,15 +16,25 @@ public class AnnShoe {
 //		Shoe s2 = (Shoe) appCtxt.getBean("newshoe");
 //		s2.makeShoeComfortable();
 //		
-//		s.setPrice(100);
-//		s2.setPrice(200);
+//		//s.setPrice(100);
+//		//s2.setPrice(200);
 //		
 //		System.out.println(s.getPrice());
 //		System.out.println(s2.getPrice());
 		
 		ShoeShowRoom ssr = (ShoeShowRoom) appCtxt.getBean("ssr");
 		//ssr.s1.makeShoeComfortable();
-		ssr.s2.makeShoeComfortable();
+		for(int i =0; i < ssr.s2.length ; i++){
+		   ssr.s2[i].makeShoeComfortable();
+		   System.out.println(ssr.s2[i].getPrice());
+		}
+		
+		ShoeShowRoom ssr2 = (ShoeShowRoom) appCtxt.getBean("ssr");
+		//ssr.s1.makeShoeComfortable();
+		for(int i =0; i < ssr2.s2.length ; i++){
+		   ssr2.s2[i].makeShoeComfortable();
+		   System.out.println(ssr2.s2[i].getPrice());
+		}
 
 	}
 
