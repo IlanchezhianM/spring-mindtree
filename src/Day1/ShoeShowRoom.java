@@ -1,9 +1,19 @@
 package Day1;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class ShoeShowRoom {
 	
-	Shoe s1;
-	
-	Shoe s2;
+	//Autowiring by Type
+//	@Autowired
+//	Shoe s1;
+//	
+	//Shoe s2;
 
+	//Autowiring by Name
+	@Autowired
+	@Qualifier("newshoe")
+	Shoe s2;
+	
 }

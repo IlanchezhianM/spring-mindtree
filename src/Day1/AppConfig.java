@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Scope;
 public class AppConfig {
 	
 	@Bean(name="oldshoe")
+	//@Scope("prototype")
 	Shoe getBata(){
 		System.out.println("Creating Bata object");
 		return new Bata();
@@ -18,6 +19,12 @@ public class AppConfig {
 	Shoe getNewBata(){
 		System.out.println("Creating New Bata object");
 		return new Bata();
+	}
+	
+	@Bean(name="ssr")
+	ShoeShowRoom getShowRoom()
+	{
+		return new ShoeShowRoom();
 	}
 
 }
