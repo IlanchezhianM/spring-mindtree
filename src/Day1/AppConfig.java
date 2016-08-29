@@ -2,13 +2,21 @@ package Day1;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
 	
-	@Bean
+	@Bean(name="oldshoe")
 	Shoe getBata(){
 		System.out.println("Creating Bata object");
+		return new Bata();
+	}
+	
+	@Bean(name="newshoe")
+	//@Scope("prototype")
+	Shoe getNewBata(){
+		System.out.println("Creating New Bata object");
 		return new Bata();
 	}
 
