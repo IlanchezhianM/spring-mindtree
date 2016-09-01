@@ -14,7 +14,9 @@ public class AnnMainApp {
 //		
 //		e.getName();
 		
-		e.getSalary();
+		//e.getSalary();
+		
+		e.setSalary(2000);
 
 	}
 

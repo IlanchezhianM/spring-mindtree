@@ -16,6 +16,16 @@ public class EmployeeAspect {
 //		System.out.println("-------In getNameAdvice-----");
 //	}
 //	
+	
+	@Before("execution(* Day2.Employee.set*(..)) && target(bean) && args(salary)")
+	public void getExtraAdv(Object bean, int salary){
+		if ( Employee.class.isInstance(bean)){
+		Employee e = (Employee)bean;
+		
+		System.out.println("-------In setSalary-----" + e.getSalary()+ "New salary" + salary);
+		}
+	}
+	
 //	@After("execution(* Day2.Employee.get*())")
 //	public void getExtraAdv(){
 //		System.out.println("-------In getExtraAdvice-----");
@@ -26,20 +36,20 @@ public class EmployeeAspect {
 //		System.out.println("-------In getMoreExtraAdvice-----");
 //	}
 	
-	@Around("execution(* Day2.Employee.get*())")
-	public Object doBasicProfiling(ProceedingJoinPoint pjp) throws Throwable {
-        // start stopwatch
-		System.out.println("Before start");
-		Object retVal = 1;
-		
-		if (false){
-        retVal = pjp.proceed(); // joint point invocation
-		}
-		
-        // stop stopwatch
-        System.out.println("After finish");
-        return retVal;
-    }
+//	@Around("execution(* Day2.Employee.get*())")
+//	public Object doBasicProfiling(ProceedingJoinPoint pjp) throws Throwable {
+//        // start stopwatch
+//		System.out.println("Before start");
+//		Object retVal = 1;
+//		
+//		if (false){
+//        retVal = pjp.proceed(); // joint point invocation
+//		}
+//		
+//        // stop stopwatch
+//        System.out.println("After finish");
+//        return retVal;
+//    }
 
 }
 
