@@ -18,13 +18,15 @@ public class Employee {
 	}
 
 	public String getName() {
+		System.out.println("Show name" + this.name);
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
 	public int getSalary() {
-		return salary;
+		System.out.println("Show salary" + this.salary);
+		return this.salary;
 	}
 	public void setSalary(int salary) {
 		this.salary = salary;

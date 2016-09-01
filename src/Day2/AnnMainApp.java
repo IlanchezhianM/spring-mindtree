@@ -11,6 +11,10 @@ public class AnnMainApp {
 		Employee e = (Employee)appCtxt.getBean(Employee.class);
 		System.out.println(e);
 		System.out.println(e.getName());
+		
+		e.getName();
+		
+		e.getSalary();
 
 	}
 
