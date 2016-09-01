@@ -9,10 +9,10 @@ public class AnnMainApp {
 		// TODO Auto-generated method stub
 		ApplicationContext appCtxt = new AnnotationConfigApplicationContext(AppConfig.class);
 		Employee e = (Employee)appCtxt.getBean(Employee.class);
-		System.out.println(e);
-		System.out.println(e.getName());
-		
-		e.getName();
+//		System.out.println(e);
+//		System.out.println(e.getName());
+//		
+//		e.getName();
 		
 		e.getSalary();
 
