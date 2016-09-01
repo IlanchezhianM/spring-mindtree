@@ -1,5 +1,8 @@
 package Day1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
@@ -21,6 +24,8 @@ public class ShoeShowRoom {
 //			this.s2[i] = new Bata(i);
 //		}
 //	}
+	
+	List<Shoe> shoes;
 	
 	
 	
